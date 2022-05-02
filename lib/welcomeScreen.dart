@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:ubelaw/customer/splash_screen_client.dart';
-import 'package:ubelaw/driver/splash_screen.dart';
+import 'package:ubelaw/sellers/splash_screen.dart';
 import 'package:ubelaw/widgets/defaultButton.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -16,7 +16,7 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
 /*  startTimer(){
     Timer(new Duration(seconds: 3), ()async{
-      Navigator.push(context, MaterialPageRoute(builder: (c)=>SplashScreenDriver()));
+      Navigator.push(context, MaterialPageRoute(builder: (c)=>SplashScreenSeller()));
 
     });
   }
@@ -43,7 +43,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 height: 200,
                 child: Column(children: [
 
-                  defaultButton(true, "Driver",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SplashScreenDriver()));}),
+                  defaultButton(true, "Seller",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SplashScreenSeller()));}),
                   Spacer(),
                   defaultButton(true, "User",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SplashScreenClient()));}),
                   Spacer()

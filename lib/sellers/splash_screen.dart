@@ -1,16 +1,16 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:ubelaw/driver/authentications/signinScreen.dart';
-import 'package:ubelaw/driver/main_screen.dart';
+import 'package:ubelaw/sellers/authentications/signinScreen.dart';
+import 'package:ubelaw/sellers/main_screen.dart';
 
-class SplashScreenDriver extends StatefulWidget {
-  const SplashScreenDriver({Key? key}) : super(key: key);
+class SplashScreenSeller extends StatefulWidget {
+  const SplashScreenSeller({Key? key}) : super(key: key);
 
   @override
-  State<SplashScreenDriver> createState() => _SplashScreenDriverState();
+  State<SplashScreenSeller> createState() => _SplashScreenSellerState();
 }
 
-class _SplashScreenDriverState extends State<SplashScreenDriver> {
+class _SplashScreenSellerState extends State<SplashScreenSeller> {
   startTimer(){
     Timer(new Duration(seconds: 3), ()async{
       Navigator.push(context, MaterialPageRoute(builder: (c)=>SignInScreen()));
@@ -36,7 +36,7 @@ class _SplashScreenDriverState extends State<SplashScreenDriver> {
                 child: Image.asset("assets/images/logo1.png"),
               ),
             ),
-            Text("UBELaw Driver",style: TextStyle(
+            Text("UBELaw Seller",style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold
 ,color: Colors.white

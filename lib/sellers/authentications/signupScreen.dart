@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../utilities/size_config.dart';
 import '../../widgets/defaultButton.dart';
 import '../../widgets/edittexts.dart';
+import '../../widgets/select_drop_list.dart';
 import '../main_screen.dart';
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -17,6 +18,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController lnameController = new TextEditingController();
   TextEditingController emailController = new TextEditingController();
   TextEditingController passwordController = new TextEditingController();
+
+  List<String> carType=["Advanced","Normal","debutant"];
+  String? selectedValue;
 
   String emailText = "";
   String passwordText = "";
@@ -41,7 +45,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: Image.asset("assets/images/logo1.png"),
               ),
               const  SizedBox(height: 10),
-              const Text("Register as a Client",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),
+              const Text("Register as a Seller",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),
               /* DefaultButton(
                 isInfinity: true,
                 clr: Colors.black54,
@@ -87,22 +91,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       SizedBox(height: getProportionateScreenHeight(10)),
 
-
-                      Row(
-                        children: [
-                          Checkbox(
-                            value: false,
-                            onChanged: (value) {
-
-                            },
-                          ),
-                          Text("Remember me"),
-                          Spacer(),
-                          // Text(
-                          //   "Forgot Password",
-                          //   style: TextStyle(decoration: TextDecoration.underline),
-                          // )
-                        ],
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: buildDropdownButtonHideUnderline(
+                            MediaQuery.of(context).size.width / 2.0, 'Seller Type', carType, selectedValue, (value) {
+                          setState(() {
+                            selectedValue = value as String;
+                          });
+                        }),
                       ),
                       SizedBox(height: getProportionateScreenHeight(20)),
                       defaultButton(true,"Continue",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>MainScreen()));}),

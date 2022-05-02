@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:ubelaw/driver/authentications/signupScreen.dart';
-import 'package:ubelaw/driver/main_screen.dart';
+import 'package:ubelaw/customer/authentication/signUpScreenClient.dart';
+import 'package:ubelaw/sellers/main_screen.dart';
 
 import '../../utilities/size_config.dart';
 import '../../widgets/defaultButton.dart';
@@ -42,7 +42,7 @@ class _SignInScreenClientState extends State<SignInScreenClient> {
               const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Image.asset("assets/images/logo1.png"),
+                child: Image.asset("assets/images/logo.png"),
               ),
               const  SizedBox(height: 10),
               const Text("Login as a Client",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),
@@ -98,7 +98,7 @@ class _SignInScreenClientState extends State<SignInScreenClient> {
                       defaultButton(true,"Continue",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>MainScreen()));}),
                       SizedBox(height: 25),
 
-                      defaultButton(true,"Register",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SignUpScreen()));}),
+                      defaultButton(true,"Register",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SignUpScreenUser()));}),
 
                     ],
                   ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../driver/main_screen.dart';
+import '../../sellers/main_screen.dart';
 import '../../utilities/size_config.dart';
 import '../../widgets/defaultButton.dart';
 import '../../widgets/edittexts.dart';
@@ -43,10 +43,10 @@ class _SignUpScreenUserState extends State<SignUpScreenUser> {
               const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Image.asset("assets/images/logo1.png"),
+                child: Image.asset("assets/images/logo.png"),
               ),
               const  SizedBox(height: 10),
-              const Text("Register as a Driver",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),
+              const Text("Register as a Client",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),
               /* DefaultButton(
                 isInfinity: true,
                 clr: Colors.black54,

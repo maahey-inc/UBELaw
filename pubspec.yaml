@@ -42,6 +42,10 @@ dependencies:
   provider: ^6.0.2
   flutter_svg_provider: ^1.0.3
   flutter_easyloading: ^3.0.3
+  dropdown_button2: ^1.4.0
+  google_maps_flutter: ^2.1.4
+#  flutter_chat_types: ^3.3.4
+#  dash_chat: ^1.1.16
 
 dev_dependencies:
   flutter_test:

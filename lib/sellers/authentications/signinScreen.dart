@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:ubelaw/driver/authentications/signupScreen.dart';
-import 'package:ubelaw/driver/main_screen.dart';
+import 'package:ubelaw/sellers/authentications/signupScreen.dart';
+import 'package:ubelaw/sellers/main_screen.dart';
 
 import '../../utilities/size_config.dart';
 import '../../widgets/defaultButton.dart';
@@ -44,7 +44,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 child: Image.asset("assets/images/logo1.png"),
               ),
               const  SizedBox(height: 10),
-              const Text("Login as a Driver",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),
+              const Text("Login as a Seller",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),
               /* DefaultButton(
                 isInfinity: true,
                 clr: Colors.black54,
@@ -72,7 +72,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 8),
                         child: buildTextFormField(
-                            controller: passwordController,obscureText:true,label: "Password",hint: "Enter your First Name Password",svg: "assets/icons/Lock.svg",textInputType: TextInputType.text),
+                            controller: passwordController,obscureText:true,label: "Password",hint: "Enter your Password",svg: "assets/icons/Lock.svg",textInputType: TextInputType.text),
                       ),
                       SizedBox(height: getProportionateScreenHeight(10)),
 

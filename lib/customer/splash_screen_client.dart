@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ubelaw/customer/authentication/signinScreenClient.dart';
-import 'package:ubelaw/driver/main_screen.dart';
+import 'package:ubelaw/sellers/main_screen.dart';
 
 class SplashScreenClient extends StatefulWidget {
   const SplashScreenClient({Key? key}) : super(key: key);
@@ -33,10 +33,10 @@ class _SplashScreenClientState extends State<SplashScreenClient> {
           children: <Widget>[
             Expanded(
               child: Center(
-                child: Image.asset("assets/images/logo1.png"),
+                child: Image.asset("assets/images/logo.png"),
               ),
             ),
-            Text("UBELaw Driver",style: TextStyle(
+            Text("UBELaw Client",style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold
 ,color: Colors.white
