@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ubelaw/sellers/tabScreens/chatTab.dart';
 import 'package:ubelaw/sellers/tabScreens/homeTab.dart';
 
-import 'tabScreens/profileTab.dart';
-import 'tabScreens/ratingTab.dart';
+import 'tabScreens/accountTab.dart';
+import 'tabScreens/orderTab.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const
+  MainScreen({Key? key}) : super(key: key);
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -21,16 +21,14 @@ class _MainScreenState extends State<MainScreen> {
       body: selectedIndex == 0
           ? HomeTab()
           : selectedIndex == 1
-              ? ChatTab()
-              : selectedIndex == 2
-                  ? RatingTab()
-                  : ProfileTab(),
+              ? OrderTab()
+              :  AccountTab(),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.credit_card), label: "Chat"),
-          BottomNavigationBarItem(icon: Icon(Icons.star), label: "Ratings"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          BottomNavigationBarItem(icon: Icon(Icons.bookmark_border), label: "Order"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
+
         ],
         unselectedItemColor: Colors.white54,
         selectedItemColor: Colors.white,

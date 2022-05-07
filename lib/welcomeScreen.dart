@@ -45,7 +45,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
                   defaultButton(true, "Seller",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SplashScreenSeller()));}),
                   Spacer(),
-                  defaultButton(true, "User",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SplashScreenClient()));}),
+                  defaultButton(true, "Client",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SplashScreenClient()));}),
                   Spacer()
                 ],),
               ),

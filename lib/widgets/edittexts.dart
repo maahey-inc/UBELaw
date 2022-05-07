@@ -3,7 +3,7 @@ import '../utilities/constants.dart';
 import 'custom_surffix_icon.dart';
 
 TextFormField buildTextFormField(
-    {required TextEditingController controller,required String label,required String hint,required String svg,required TextInputType textInputType, bool obscureText=false}) {
+    {required TextEditingController controller,required String label,required String hint,required String svg,required TextInputType textInputType, bool obscureText=false,int maxLine=1}) {
   OutlineInputBorder outlineInputBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(10),
@@ -12,6 +12,8 @@ TextFormField buildTextFormField(
     );
   }
   return TextFormField(
+
+    maxLines: maxLine,
 
     obscureText: obscureText,
     controller: controller,
@@ -24,6 +26,7 @@ TextFormField buildTextFormField(
 
     decoration:
     InputDecoration(
+
       contentPadding: EdgeInsets.symmetric(
         horizontal: 42,
         vertical: 20,

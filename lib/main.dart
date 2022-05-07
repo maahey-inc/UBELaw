@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:ubelaw/sellers/splash_screen.dart';
 
 import 'welcomeScreen.dart';
 
@@ -36,7 +37,7 @@ class _MyAppState extends State<MyApp> {
 
         primarySwatch: Colors.blue,
       ),
-      home: KeyedSubtree(child: WelcomeScreen(),
+      home: KeyedSubtree(child: SplashScreenSeller(),
       key: key,
       ),
 

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ubelaw/sellers/authentications/registration2.dart';
 import '../../utilities/size_config.dart';
 import '../../widgets/defaultButton.dart';
 import '../../widgets/edittexts.dart';
-import '../../widgets/select_drop_list.dart';
-import '../main_screen.dart';
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
@@ -13,11 +12,10 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
-  TextEditingController phoneController = new TextEditingController();
   TextEditingController fnameController = new TextEditingController();
-  TextEditingController lnameController = new TextEditingController();
   TextEditingController emailController = new TextEditingController();
   TextEditingController passwordController = new TextEditingController();
+  TextEditingController conPassController = new TextEditingController();
 
   List<String> carType=["Advanced","Normal","debutant"];
   String? selectedValue;
@@ -70,15 +68,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: buildTextFormField(controller: fnameController,label: "First Name",hint: "Enter your First Name",svg: "assets/icons/User.svg",textInputType: TextInputType.name),
                       ),
                       SizedBox(height: getProportionateScreenHeight(10)),
-                      Padding(padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 8),
-                        child: buildTextFormField(controller: lnameController,label: "Last Name",hint: "Enter your Last Name",svg: "assets/icons/User.svg",textInputType: TextInputType.name),
-                      ),
-                      SizedBox(height: getProportionateScreenHeight(10)),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 8),
-                        child: buildTextFormField(controller: phoneController,label: "Phone Number",hint: "Enter your Phone Number",svg: "assets/icons/Phone.svg",textInputType: TextInputType.number),
-                      ),
-                      SizedBox(height: getProportionateScreenHeight(10)),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 8),
                         child: buildTextFormField(controller: emailController,label: "Email Address",hint: "Enter your Email Address",svg: "assets/icons/Lock.svg",textInputType: TextInputType.emailAddress),
@@ -89,20 +78,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         child: buildTextFormField(
                             controller: passwordController,obscureText:true,label: "Password",hint: "Enter your First Name Password",svg: "assets/icons/Lock.svg",textInputType: TextInputType.text),
                       ),
+
+                      SizedBox(height: getProportionateScreenHeight(10)),
+                      Padding(padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 8),
+                        child: buildTextFormField(controller: conPassController,label: "Confirm Password",hint: "Enter your Password",svg: "assets/icons/User.svg",textInputType: TextInputType.name),
+                      ),
                       SizedBox(height: getProportionateScreenHeight(10)),
 
-                      SizedBox(height: 10),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: buildDropdownButtonHideUnderline(
-                            MediaQuery.of(context).size.width / 2.0, 'Seller Type', carType, selectedValue, (value) {
-                          setState(() {
-                            selectedValue = value as String;
-                          });
-                        }),
-                      ),
                       SizedBox(height: getProportionateScreenHeight(20)),
-                      defaultButton(true,"Continue",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>MainScreen()));}),
+                      defaultButton(true,"Next",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>Registration2()));}),
 
                       SizedBox(height: getProportionateScreenHeight(40)),
                     ],

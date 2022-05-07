@@ -1,64 +1,72 @@
 import 'package:flutter/material.dart';
+import 'package:ubelaw/sellers/createOfferSeller.dart';
+import 'package:ubelaw/widgets/defaultButton.dart';
 
-class ChatTab extends StatefulWidget {
-  const ChatTab({Key? key}) : super(key: key);
+class ChatPageSeller extends StatefulWidget {
+  const ChatPageSeller({Key? key}) : super(key: key);
 
   @override
-  State<ChatTab> createState() => _ChatTabState();
+  State<ChatPageSeller> createState() => _ChatPageSellerState();
 }
 
-class _ChatTabState extends State<ChatTab> {
+class _ChatPageSellerState extends State<ChatPageSeller> {
   TextEditingController? msgController;
-
   @override
   Widget build(BuildContext context) {
-
-
     return Column(
       children: <Widget>[
         Expanded(
           child: ListView(
             children: [
-              MessageTile("khan", "HI", false),
-              MessageTile("Ahmad", "Hello", true),
-              MessageTile("khan", "How are you", false),
-              MessageTile("Ahmad", "Fine What about You", true),
+              MessageTile("khan", "HI", true),
+              MessageTile("Ahmad", "Hello", false),
+              MessageTile("khan", "How are you", true),
+              MessageTile("Ahmad", "Fine What about You", false),
             ],
           ),
         ),
         Container(
           //color: Colors.white,
-          child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
-            padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(25.0),
-            ),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: TextField(
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textCapitalization: TextCapitalization.sentences,
-                    controller: msgController,
-                    decoration: InputDecoration.collapsed(
-                      hintText: 'Send Message ...',
-                    ),
-                  ),
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
+                padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25.0),
                 ),
-                IconButton(
-                  icon: Icon(Icons.send),
-                  color: Colors.blue,
-                  iconSize: 30.0,
-                  onPressed: () async {},
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: TextField(
+                        style: TextStyle(
+                          color: Colors.black54,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textCapitalization: TextCapitalization.sentences,
+                        controller: msgController,
+                        decoration: InputDecoration.collapsed(
+                          hintText: 'Send Message ...',
+                        ),
+                      ),
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.send),
+                      color: Colors.blue,
+                      iconSize: 30.0,
+                      onPressed: () async {},
+                    ),
+                  ],
                 ),
-              ],
-            ),
+
+              ),
+              defaultButton(true, "Create Offer", (){
+                Navigator.push(context, MaterialPageRoute(builder: (c)=>CreateOfferSeller()));
+              }),
+              SizedBox(height: 2,)
+            ],
           ),
         ),
       ],
