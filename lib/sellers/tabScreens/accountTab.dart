@@ -30,11 +30,12 @@ class _AccountTabState extends State<AccountTab> {
           ,child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text("4.9 ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20),textAlign: TextAlign.center,),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    Text("4.9 ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20),textAlign: TextAlign.center,),
+
                     Icon(Icons.star,color: Colors.amber,),
                     Icon(Icons.star,color: Colors.amber,),
                     Icon(Icons.star,color: Colors.amber,),

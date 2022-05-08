@@ -27,8 +27,8 @@ class _HomeTabState extends State<HomeTab> {
                 child: Card(
                   shadowColor: Colors.blueGrey,
                   elevation: 5,
-                  color: Color(0xFF262A34),
-                  shape: RoundedRectangleBorder(
+                  color:const Color(0xFF262A34),
+                  shape:const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(12),
                         bottomLeft: Radius.circular(12),
@@ -36,7 +36,7 @@ class _HomeTabState extends State<HomeTab> {
                         bottomRight: Radius.circular(12)),
                   ),
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding:const EdgeInsets.all(10),
                     width: MediaQuery.of(context).size.width / 1.1,
                     // decoration: BoxDecoration(
                     //   border: Border(
@@ -50,9 +50,9 @@ class _HomeTabState extends State<HomeTab> {
 
                             Expanded(
                               flex: 3,
-                              child: Container(
+                              child:Container(
                                 height: 60,
-                                child: CircleAvatar(
+                                child: const CircleAvatar(
                                   radius: 50,
                                   backgroundColor: Colors.blueGrey,
                                 ),
@@ -63,7 +63,7 @@ class _HomeTabState extends State<HomeTab> {
                               child: Column(
                                 children: [
                                   Row(
-                                    children: [
+                                    children:const [
                                       Text(
                                         "Kamran ",
                                         style: TextStyle(
@@ -77,7 +77,7 @@ class _HomeTabState extends State<HomeTab> {
                                   Row(
 
                                     children: [
-                                      Text(
+                                      const  Text(
                                         "4.9 ",
                                         style: TextStyle(
                                             color: Colors.white,
@@ -88,7 +88,7 @@ class _HomeTabState extends State<HomeTab> {
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceAround,
-                                        children: [
+                                        children:const [
                                           Icon(
                                             Icons.star,
                                             color: Colors.amber,
@@ -132,8 +132,8 @@ class _HomeTabState extends State<HomeTab> {
                     Card(
                       shadowColor: Colors.blueGrey,
                       elevation: 5,
-                      color: Color(0xFF262A34),
-                      shape: RoundedRectangleBorder(
+                      color:const Color(0xFF262A34),
+                      shape:const  RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(12),
                             bottomLeft: Radius.circular(12),
@@ -142,15 +142,17 @@ class _HomeTabState extends State<HomeTab> {
                       ),
                       child: Container(
                         height: 100,
-                        width: MediaQuery.of(context).size.width/3.4,
+                        width: MediaQuery.of(context).size.width/3.5,
                         padding: const EdgeInsets.all(20.0),
                         child: Center(
                           child: Column(
-                            children: [
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const  [
                               Text(
                                 "Earnings",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -158,8 +160,9 @@ class _HomeTabState extends State<HomeTab> {
                               SizedBox(height: 5),
                               Text(
                                 "20 \$",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -173,8 +176,8 @@ class _HomeTabState extends State<HomeTab> {
                     Card(
                       shadowColor: Colors.blueGrey,
                       elevation: 5,
-                      color: Color(0xFF262A34),
-                      shape: RoundedRectangleBorder(
+                      color:const Color(0xFF262A34),
+                      shape:const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(12),
                             bottomLeft: Radius.circular(12),
@@ -183,15 +186,17 @@ class _HomeTabState extends State<HomeTab> {
                       ),
                       child: Container(
                         height: 100,
-                        width: MediaQuery.of(context).size.width/3.4,
+                        width: MediaQuery.of(context).size.width/3.5,
                         padding: const EdgeInsets.all(20.0),
                         child: Center(
                           child: Column(
-                            children: [
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
                               Text(
                                 "Active\nOrders",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -199,8 +204,9 @@ class _HomeTabState extends State<HomeTab> {
                               SizedBox(height: 5),
                               Text(
                                 "2",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -214,8 +220,8 @@ class _HomeTabState extends State<HomeTab> {
                     Card(
                       shadowColor: Colors.blueGrey,
                       elevation: 5,
-                      color: Color(0xFF262A34),
-                      shape: RoundedRectangleBorder(
+                      color:const Color(0xFF262A34),
+                      shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(12),
                             bottomLeft: Radius.circular(12),
@@ -224,15 +230,17 @@ class _HomeTabState extends State<HomeTab> {
                       ),
                       child: Container(
                         height: 100,
-                        width: MediaQuery.of(context).size.width/3.4,
+                        width: MediaQuery.of(context).size.width/3.5,
                         padding: const EdgeInsets.all(20.0),
                         child: Center(
                           child: Column(
-                            children: [
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
                               Text(
                                 "Cancelled\nOrders",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -240,8 +248,9 @@ class _HomeTabState extends State<HomeTab> {
                               SizedBox(height: 5),
                               Text(
                                 "10",
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
@@ -264,7 +273,7 @@ class _HomeTabState extends State<HomeTab> {
                   date: "20/02/2022",
                   buttonFunction: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (c) => ChatPageSeller()));
+                        MaterialPageRoute(builder: (c) =>const ChatPageSeller()));
                   },
                 ),
               ),
@@ -276,7 +285,7 @@ class _HomeTabState extends State<HomeTab> {
                   date: "20/02/2022",
                   buttonFunction: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (c) => ChatPageSeller()));
+                        MaterialPageRoute(builder: (c) =>const ChatPageSeller()));
                   },
                 ),
               ),
@@ -288,7 +297,7 @@ class _HomeTabState extends State<HomeTab> {
                   date: "20/02/2022",
                   buttonFunction: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (c) => ChatPageSeller()));
+                        MaterialPageRoute(builder: (c) =>const ChatPageSeller()));
                   },
                 ),
               ),
@@ -300,7 +309,7 @@ class _HomeTabState extends State<HomeTab> {
                   date: "20/02/2022",
                   buttonFunction: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (c) => ChatPageSeller()));
+                        MaterialPageRoute(builder: (c) =>const ChatPageSeller()));
                   },
                 ),
               ),
