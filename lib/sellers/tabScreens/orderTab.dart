@@ -32,7 +32,7 @@ class _OrderTabState extends State<OrderTab> {
                       tabs: [
                         Tab(
                           child: Text(
-                            "Request",
+                            "Pending",
                             style: TextStyle(
                                 color: Colors.white,
                                 ),
@@ -76,7 +76,7 @@ class _OrderTabState extends State<OrderTab> {
                     children: [
                       // first tab bar view widget
 
-                      SellerOrderRequest(),
+                      SellerOrderPanding(),
                       SellerOrderOngoing(),
                       SellerOrderCompleted(),
                       SellerOrderCancelled(),

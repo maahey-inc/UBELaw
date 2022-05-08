@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ubelaw/widgets/orderDialog.dart';
-class SellerOrderRequest extends StatefulWidget {
-  const SellerOrderRequest({Key? key}) : super(key: key);
+class SellerOrderPanding extends StatefulWidget {
+  const SellerOrderPanding({Key? key}) : super(key: key);
 
   @override
-  State<SellerOrderRequest> createState() => _SellerOrderRequestState();
+  State<SellerOrderPanding> createState() => _SellerOrderPandingState();
 }
 
-class _SellerOrderRequestState extends State<SellerOrderRequest> {
+class _SellerOrderPandingState extends State<SellerOrderPanding> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Column(children: [
