@@ -22,7 +22,13 @@ class _ProfileTabClientState extends State<ProfileTabClient> {
         Column(
           children: [
             Container(height: 90,margin: EdgeInsets.only(top: 60),
-              child: CircleAvatar(radius: 50,backgroundColor: Colors.white,),),
+              child: CircleAvatar(radius: 50,backgroundColor: Colors.white,child:  CircleAvatar(radius: 50,backgroundColor: Colors.white,
+                child:  CircleAvatar(
+                  child: Image.asset("assets/images/avatar.png"),
+                  radius: 50,
+                  backgroundColor: Colors.blueGrey,
+                ),
+              ),),),
             Padding(padding: EdgeInsets.all(4)),
             Text("Kamran ",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20),textAlign: TextAlign.center,),
             Padding(padding: EdgeInsets.all(4)),

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ubelaw/customer/authentication/signUpScreenClient.dart';
+import 'package:ubelaw/customer/main_screen_client.dart';
 import 'package:ubelaw/sellers/main_screen.dart';
 
 import '../../utilities/size_config.dart';
@@ -42,7 +43,7 @@ class _SignInScreenClientState extends State<SignInScreenClient> {
               const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Image.asset("assets/images/logo.png"),
+                child: Image.asset("assets/images/logo_app.png"),
               ),
               const  SizedBox(height: 10),
               const Text("Login as a Client",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),
@@ -78,24 +79,28 @@ class _SignInScreenClientState extends State<SignInScreenClient> {
                       SizedBox(height: getProportionateScreenHeight(10)),
 
 
-                      Row(
-                        children: [
-                          Checkbox(
-                            value: false,
-                            onChanged: (value) {
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 8),
 
-                            },
-                          ),
-                          Text("Remember me"),
-                          Spacer(),
-                          // Text(
-                          //   "Forgot Password",
-                          //   style: TextStyle(decoration: TextDecoration.underline),
-                          // )
-                        ],
+                        child: Row(
+                          children: [
+                            Checkbox(
+                              value: false,
+                              onChanged: (value) {
+
+                              },
+                            ),
+                            Text("Remember me"),
+                            Spacer(),
+                            // Text(
+                            //   "Forgot Password",
+                            //   style: TextStyle(decoration: TextDecoration.underline),
+                            // )
+                          ],
+                        ),
                       ),
                       SizedBox(height: getProportionateScreenHeight(20)),
-                      defaultButton(true,"Continue",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>MainScreen()));}),
+                      defaultButton(true,"Continue",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>MainScreenClient()));}),
                       SizedBox(height: 25),
 
                       defaultButton(true,"Register",(){ Navigator.push(context, MaterialPageRoute(builder: (c)=>SignUpScreenUser()));}),

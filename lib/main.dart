@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
 
         primarySwatch: Colors.blue,
       ),
-      home: KeyedSubtree(child: SplashScreenSeller(),
+      home: KeyedSubtree(child: WelcomeScreen(),
       key: key,
       ),
 

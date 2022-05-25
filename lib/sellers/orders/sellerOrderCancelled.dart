@@ -31,7 +31,8 @@ class _SellerOrderCancelledState extends State<SellerOrderCancelled> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,),
+            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
+              child: Image.asset("assets/images/avatar.png"),),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -57,7 +58,8 @@ class _SellerOrderCancelledState extends State<SellerOrderCancelled> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,),
+            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
+              child: Image.asset("assets/images/avatar.png"),),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -83,7 +85,8 @@ class _SellerOrderCancelledState extends State<SellerOrderCancelled> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,),
+            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
+              child: Image.asset("assets/images/avatar.png"),),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -109,7 +112,8 @@ class _SellerOrderCancelledState extends State<SellerOrderCancelled> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,),
+            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
+              child: Image.asset("assets/images/avatar.png"),),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),

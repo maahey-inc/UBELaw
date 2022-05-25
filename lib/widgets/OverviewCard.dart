@@ -5,22 +5,21 @@ import 'custom_surffix_icon.dart';
 
 class OverviewCard extends StatelessWidget {
   const OverviewCard({
-
     required this.clientName,
     required this.date,
-
     this.cardBackgroundColor = const Color(0xFF262A34),
     required this.cardTheme,
     required this.buttonFunction,
+     this.valueHolder = 2,
   });
 
   final String clientName;
   final String date;
 
-
   final Color cardBackgroundColor;
   final Color cardTheme;
   final Function() buttonFunction;
+  final int valueHolder;
 
   @override
   Widget build(BuildContext context) {
@@ -45,15 +44,16 @@ class OverviewCard extends StatelessWidget {
           child: Stack(
             children: [
               Container(
-                width: MediaQuery.of(context).size.width/1.8,
+                width: MediaQuery.of(context).size.width / 1.8,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     // Title Text
                     Container(
-                      width: MediaQuery.of(context).size.width/1.8,
+                      width: MediaQuery.of(context).size.width / 1.8,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 10.0,top: 10.0,bottom: 2),
+                        padding: const EdgeInsets.only(
+                            left: 10.0, top: 10.0, bottom: 2),
                         child: Text(
                           clientName,
                           style: TextStyle(
@@ -64,9 +64,9 @@ class OverviewCard extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width/1.8,
+                      width: MediaQuery.of(context).size.width / 1.8,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 10.0,bottom: 2),
+                        padding: const EdgeInsets.only(left: 10.0, bottom: 2),
                         child: Text(
                           date,
                           style: TextStyle(
@@ -77,36 +77,65 @@ class OverviewCard extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width/1.8,
+                      width: MediaQuery.of(context).size.width / 1.8,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 10.0,bottom: 10),
-                        child: Text(
-                          "Voice Note",
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: cardTheme,
-                          ),
-                        ),
-                      ),
+                          padding:
+                              const EdgeInsets.only(left: 10.0, bottom: 10),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                flex: 1,
+                                child: Icon(
+                                  Icons.play_arrow,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Expanded(
+                                flex: 8,
+                                child: Container(
+                                  child: Slider(
+                                      value: valueHolder.toDouble(),
+                                      min: 1,
+                                      max: 100,
+                                      divisions: 100,
+                                      activeColor: Colors.white,
+                                      inactiveColor: Colors.grey,
+                                      label: '${valueHolder.round()}',
+                                      onChanged: (double newValue) {
+                                        // setState(() {
+                                        //   valueHolder = newValue.round();
+                                        // });
+                                      },
+                                      semanticFormatterCallback:
+                                          (double newValue) {
+                                        return '${newValue.round()}';
+                                      }),
+                                ),
+                              ),
+
+                            ],
+                          )),
                     ),
 
                     // Content in the middle of the Card
 
-
                     // Button at the bottom of the Card
-
                   ],
                 ),
               ),
               Align(
-                  alignment: Alignment.bottomRight,
-                  child:Container(
-                    width: 50,
-                    height: 70,
-                    child: GestureDetector(
-                        onTap: buttonFunction,
-                        child: Icon(Icons.message_outlined,color: Colors.white,)),
-                  ),)
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  width: 50,
+                  height: 70,
+                  child: GestureDetector(
+                      onTap: buttonFunction,
+                      child: Icon(
+                        Icons.message_outlined,
+                        color: Colors.white,
+                      )),
+                ),
+              )
             ],
           ),
         ),

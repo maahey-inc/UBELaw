@@ -34,7 +34,7 @@ class _SplashScreenSellerState extends State<SplashScreenSeller> {
           children: <Widget>[
             Expanded(
               child: Center(
-                child: Image.asset("assets/images/logo1.png"),
+                child: Image.asset("assets/images/logo_app.png"),
               ),
             ),
             Text(

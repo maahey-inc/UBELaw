@@ -84,7 +84,8 @@ class _OrderDialogState extends State<OrderDialog>
                   SizedBox(height: 25),
                   Row(children: [
                     Container(height: 60,
-                      child: CircleAvatar(radius: 50,backgroundColor: Colors.blueGrey,),),
+                      child: CircleAvatar(radius: 50,backgroundColor: Colors.blueGrey,
+                        child: Image.asset("assets/images/avatar.png"),),),
                     Text(
                       widget.sellerName,
                       style: TextStyle(

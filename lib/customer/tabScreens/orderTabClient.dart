@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:ubelaw/customer/orders/clientOrderOpen.dart';
+import 'package:ubelaw/customer/orders/clientOrderRequest.dart';
 import 'package:ubelaw/sellers/orders/sellerOrderCancelled.dart';
 import 'package:ubelaw/sellers/orders/sellerOrderCompleted.dart';
 import 'package:ubelaw/sellers/orders/sellerOrderOngoing.dart';
 import 'package:ubelaw/sellers/orders/sellerOrderRequest.dart';
-class OrderTab extends StatefulWidget {
-  const OrderTab({Key? key}) : super(key: key);
+
+import '../orders/clientOrderCancelled.dart';
+import '../orders/clientOrderCompleted.dart';
+class OrderTabClient extends StatefulWidget {
+  const OrderTabClient({Key? key}) : super(key: key);
 
   @override
-  State<OrderTab> createState() => _OrderTabState();
+  State<OrderTabClient> createState() => _OrderTabClientState();
 }
 
-class _OrderTabState extends State<OrderTab> {
+class _OrderTabClientState extends State<OrderTabClient> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +37,7 @@ class _OrderTabState extends State<OrderTab> {
                       tabs: [
                         Tab(
                           child: Text(
-                            "Pending",
+                            "Request",
                             style: TextStyle(
                                 color: Colors.white,
                                 ),
@@ -40,7 +45,7 @@ class _OrderTabState extends State<OrderTab> {
                         ),
                         Tab(
                           child: Text(
-                            "Ongoing",
+                            "Open",
                             style: TextStyle(
                                 color: Colors.white,
 
@@ -76,10 +81,10 @@ class _OrderTabState extends State<OrderTab> {
                     children: [
                       // first tab bar view widget
 
-                      SellerOrderPanding(),
-                      SellerOrderOngoing(),
-                      SellerOrderCompleted(),
-                      SellerOrderCancelled(),
+                      ClientOrderRequest(),
+                      ClientOrderOpen(),
+                      ClientOrderCompleted(),
+                      ClientOrderCancelled(),
 
                       // second tab bar viiew widget
 

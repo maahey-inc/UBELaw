@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-class AccountTab extends StatefulWidget {
-  const AccountTab({Key? key}) : super(key: key);
+class ClientAccountTab extends StatefulWidget {
+  const ClientAccountTab({Key? key}) : super(key: key);
 
   @override
-  State<AccountTab> createState() => _AccountTabState();
+  State<ClientAccountTab> createState() => _ClientAccountTabState();
 }
 
-class _AccountTabState extends State<AccountTab> {
+class _ClientAccountTabState extends State<ClientAccountTab> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Stack(children: [

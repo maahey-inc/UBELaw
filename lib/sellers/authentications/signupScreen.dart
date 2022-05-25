@@ -40,7 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Image.asset("assets/images/logo1.png"),
+                child: Image.asset("assets/images/logo_app.png"),
               ),
               const  SizedBox(height: 10),
               const Text("Register as a Seller",style: TextStyle(fontSize: 26,color: Colors.black54,fontWeight: FontWeight.bold),),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ubelaw/customer/tabScreens/accountTabClient.dart';
 import 'package:ubelaw/customer/tabScreens/chatTabClient.dart';
-import 'package:ubelaw/customer/tabScreens/homeTabClient.dart';
+import 'package:ubelaw/customer/tabScreens/orderTabClient.dart';
 import 'package:ubelaw/customer/tabScreens/profileTabClient.dart';
-import 'package:ubelaw/customer/tabScreens/ratingTabClient.dart';
 
 class MainScreenClient extends StatefulWidget {
   const MainScreenClient({Key? key}) : super(key: key);
@@ -24,16 +24,17 @@ class _MainScreenClientState extends State<MainScreenClient>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  selectedIndex==0?HomeTabClient():selectedIndex==1?
-        ChatTabClient():selectedIndex==2?
-        RatingTabClient():
-        ProfileTabClient(),
+      body: selectedIndex == 0
+          ? ChatTabClient()
+          : selectedIndex == 1
+          ? OrderTabClient()
+          :  ClientAccountTab(),
       bottomNavigationBar: BottomNavigationBar(
-        items: const[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.credit_card), label: "Chat"),
-          BottomNavigationBarItem(icon: Icon(Icons.star), label: "Ratings"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
+          BottomNavigationBarItem(icon: Icon(Icons.bookmark_border), label: "Order"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
+
         ],
         unselectedItemColor: Colors.white54,
         selectedItemColor: Colors.white,
@@ -43,7 +44,11 @@ class _MainScreenClientState extends State<MainScreenClient>
         unselectedLabelStyle: TextStyle(fontSize: 14),
         showUnselectedLabels: true,
         currentIndex: selectedIndex,
-        onTap: onClickItems,
+        onTap: (int index) {
+          setState(() {
+            selectedIndex = index;
+          });
+        },
       ),
     );
   }

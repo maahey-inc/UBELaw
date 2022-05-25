@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-
-import '../../widgets/orderDialog.dart';
-class SellerOrderCompleted extends StatefulWidget {
-  const SellerOrderCompleted({Key? key}) : super(key: key);
+import 'package:ubelaw/widgets/orderDialog.dart';
+class ClientOrderRequest extends StatefulWidget {
+  const ClientOrderRequest({Key? key}) : super(key: key);
 
   @override
-  State<SellerOrderCompleted> createState() => _SellerOrderCompletedState();
+  State<ClientOrderRequest> createState() => _ClientOrderRequestState();
 }
 
-class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
+class _ClientOrderRequestState extends State<ClientOrderRequest> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Column(children: [
@@ -17,13 +16,13 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           showDialog(
             context: context,
             builder: (_) => OrderDialog(
-              pressYes: () {
-                Navigator.of(context).pop();
-              },
-              pressNo: () {
-                Navigator.of(context).pop();
-              }, sellerName: 'Seller Name', price: '1200', desc: 'this is a test request', status: 2,
-            ),
+                pressYes: () {
+                  Navigator.of(context).pop();
+                },
+                pressNo: () {
+                  Navigator.of(context).pop();
+                }, sellerName: 'Seller Name', price: '1200', desc: 'this is a test request', status: 0,
+               ),
           );
         },
         child: Card(
@@ -31,8 +30,8 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
-              child: Image.asset("assets/images/avatar.png"),),
+            leading:   CircleAvatar(
+              child: Image.asset("assets/images/avatar.png"),radius: 50,backgroundColor: Colors.white,),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -49,7 +48,7 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
               },
               pressNo: () {
                 Navigator.of(context).pop();
-              }, sellerName: 'Seller Name', price: '1200', desc: 'this is a test request', status: 2,
+              }, sellerName: 'Seller Name', price: '1200', desc: 'this is a test request', status: 0,
             ),
           );
         },
@@ -58,8 +57,8 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
-              child: Image.asset("assets/images/avatar.png"),),
+            leading:   CircleAvatar(
+              child: Image.asset("assets/images/avatar.png"),radius: 50,backgroundColor: Colors.white,),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -76,7 +75,7 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
               },
               pressNo: () {
                 Navigator.of(context).pop();
-              }, sellerName: 'Seller Name', price: '1200', desc: 'this is a test request', status: 2,
+              }, sellerName: 'Seller Name', price: '1200', desc: 'this is a test request', status: 0,
             ),
           );
         },
@@ -85,8 +84,8 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
-              child: Image.asset("assets/images/avatar.png"),),
+            leading:   CircleAvatar(
+              child: Image.asset("assets/images/avatar.png"),radius: 50,backgroundColor: Colors.white,),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -103,7 +102,7 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
               },
               pressNo: () {
                 Navigator.of(context).pop();
-              }, sellerName: 'Seller Name', price: '1200', desc: 'this is a test request', status: 2,
+              }, sellerName: 'Seller Name', price: '1200', desc: 'this is a test request', status: 0,
             ),
           );
         },
@@ -112,8 +111,8 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
-              child: Image.asset("assets/images/avatar.png"),),
+            leading:   CircleAvatar(
+              child: Image.asset("assets/images/avatar.png"),radius: 50,backgroundColor: Colors.white,),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),

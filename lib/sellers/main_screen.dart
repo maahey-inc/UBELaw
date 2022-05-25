@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ubelaw/sellers/tabScreens/homeTab.dart';
 
 import 'tabScreens/accountTab.dart';
+import 'tabScreens/mapTab.dart';
 import 'tabScreens/orderTab.dart';
 
 class MainScreen extends StatefulWidget {
@@ -21,11 +22,14 @@ class _MainScreenState extends State<MainScreen> {
       body: selectedIndex == 0
           ? HomeTab()
           : selectedIndex == 1
+              ? MapPage()
+          : selectedIndex == 2
               ? OrderTab()
               :  AccountTab(),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.map_outlined), label: "Map"),
           BottomNavigationBarItem(icon: Icon(Icons.bookmark_border), label: "Order"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
 

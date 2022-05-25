@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:ubelaw/sellers/createOfferSeller.dart';
-import 'package:ubelaw/widgets/defaultButton.dart';
 
-class ChatPageSeller extends StatefulWidget {
-  const ChatPageSeller({Key? key}) : super(key: key);
+class ChatScreenClient extends StatefulWidget {
+  const ChatScreenClient({Key? key}) : super(key: key);
 
   @override
-  State<ChatPageSeller> createState() => _ChatPageSellerState();
+  State<ChatScreenClient> createState() => _ChatScreenClientState();
 }
 
-class _ChatPageSellerState extends State<ChatPageSeller> {
+class _ChatScreenClientState extends State<ChatScreenClient> {
   TextEditingController? msgController;
   @override
   Widget build(BuildContext context) {
@@ -27,46 +25,37 @@ class _ChatPageSellerState extends State<ChatPageSeller> {
         ),
         Container(
           //color: Colors.white,
-          child: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
-                padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(25.0),
-                ),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: TextField(
-                        style: TextStyle(
-                          color: Colors.black54,
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textCapitalization: TextCapitalization.sentences,
-                        controller: msgController,
-                        decoration: InputDecoration.collapsed(
-                          hintText: 'Send Message ...',
-                        ),
-                      ),
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
+            padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(25.0),
+            ),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: TextField(
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
                     ),
-                    IconButton(
-                      icon: Icon(Icons.send),
-                      color: Colors.blue,
-                      iconSize: 30.0,
-                      onPressed: () async {},
+                    textCapitalization: TextCapitalization.sentences,
+                    controller: msgController,
+                    decoration: InputDecoration.collapsed(
+                      hintText: 'Send Message ...',
                     ),
-                  ],
+                  ),
                 ),
-
-              ),
-              defaultButton(true, "Create Offer", (){
-                Navigator.push(context, MaterialPageRoute(builder: (c)=>CreateOfferSeller()));
-              }),
-              SizedBox(height: 2,)
-            ],
+                IconButton(
+                  icon: Icon(Icons.send),
+                  color: Colors.blue,
+                  iconSize: 30.0,
+                  onPressed: () async {},
+                ),
+              ],
+            ),
           ),
         ),
       ],

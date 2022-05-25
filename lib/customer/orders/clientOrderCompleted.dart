@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/orderDialog.dart';
-class SellerOrderCompleted extends StatefulWidget {
-  const SellerOrderCompleted({Key? key}) : super(key: key);
+class ClientOrderCompleted extends StatefulWidget {
+  const ClientOrderCompleted({Key? key}) : super(key: key);
 
   @override
-  State<SellerOrderCompleted> createState() => _SellerOrderCompletedState();
+  State<ClientOrderCompleted> createState() => _ClientOrderCompletedState();
 }
 
-class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
+class _ClientOrderCompletedState extends State<ClientOrderCompleted> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Column(children: [
@@ -31,8 +31,8 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
-              child: Image.asset("assets/images/avatar.png"),),
+            leading:   CircleAvatar(
+              child: Image.asset("assets/images/avatar.png"),radius: 50,backgroundColor: Colors.white,),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -58,8 +58,8 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
-              child: Image.asset("assets/images/avatar.png"),),
+            leading:   CircleAvatar(
+              child: Image.asset("assets/images/avatar.png"),radius: 50,backgroundColor: Colors.white,),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -85,8 +85,8 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
-              child: Image.asset("assets/images/avatar.png"),),
+            leading:   CircleAvatar(
+              child: Image.asset("assets/images/avatar.png"),radius: 50,backgroundColor: Colors.white,),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -112,8 +112,8 @@ class _SellerOrderCompletedState extends State<SellerOrderCompleted> {
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
 
-            leading:   CircleAvatar(radius: 50,backgroundColor: Colors.white,
-              child: Image.asset("assets/images/avatar.png"),),
+            leading:   CircleAvatar(
+              child: Image.asset("assets/images/avatar.png"),radius: 50,backgroundColor: Colors.white,),
             title: Text("Seller Name"),
             subtitle: Text("type"),
             trailing: Icon(Icons.arrow_forward_ios),

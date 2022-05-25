@@ -26,6 +26,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     super.initState();
     startTimer();
   }*/
+
+
+
   @override
   Widget build(BuildContext context) {
     final ThemeData _theme = Theme.of(context);
@@ -35,7 +38,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         child: SafeArea(
           child: Stack(
             children: <Widget>[
-              Image.asset("assets/images/walkthrough3.png"),
+              Image.asset("assets/images/logo_app.png"),
 
             Align(
               alignment: Alignment.bottomCenter,

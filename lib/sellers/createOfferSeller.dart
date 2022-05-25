@@ -56,6 +56,15 @@ class _CreateOfferSellerState extends State<CreateOfferSeller> {
                       ),
                       SizedBox(height: 10),
 
+                Center(
+                  child: CircleAvatar(radius: 50,backgroundColor: Colors.white,
+                    child:  CircleAvatar(
+                      child: Icon(Icons.mic,),
+                      radius: 50,
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                  ),
+                ),
 
                       SizedBox(height: 20),
                       defaultButton(true,"Send",(){
