@@ -2,6 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:ubelaw/widgets/defaultButton.dart';
 
+
+import '../sellers/main_screen.dart';
+
 class ConfirmDialog extends StatefulWidget {
   final Function() pressYes;
   final Function() pressNo;
@@ -86,7 +89,8 @@ class _ConfirmDialogState extends State<ConfirmDialog>
                       ),
                     ),
                   ),
-                  SizedBox(height: 25),
+
+
                 ],
               ),
               Align(
@@ -94,6 +98,17 @@ class _ConfirmDialogState extends State<ConfirmDialog>
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 8.0),
                   child: defaultButton(true, "OK",  widget.pressYes),
+                  //   child: WebViewPlus(
+                  //     javascriptMode: JavascriptMode.unrestricted,
+                  //     onWebViewCreated: (controller){
+                  //       controller.loadUrl("assets/webpages/index.html");
+                  //     },
+                  //     javascriptChannels: Set.from([
+                  //       JavascriptChannel(name: 'Captcha', onMessageReceived: (JavascriptMessage message){
+                  //         Navigator.push(context, MaterialPageRoute(builder: (c)=>MainScreen()));
+                  //       })
+                  //     ]),
+                  //   )
                 ),
               )
             ],

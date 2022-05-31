@@ -11,6 +11,7 @@ class ChatPageSeller extends StatefulWidget {
 
 class _ChatPageSellerState extends State<ChatPageSeller> {
   TextEditingController? msgController;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,10 +19,12 @@ class _ChatPageSellerState extends State<ChatPageSeller> {
         Expanded(
           child: ListView(
             children: [
-              MessageTile("khan", "HI", true),
-              MessageTile("Ahmad", "Hello", false),
-              MessageTile("khan", "How are you", true),
-              MessageTile("Ahmad", "Fine What about You", false),
+              MessageTile(name: "khan",msg: "HI",isMe:true,isVoice: false,),
+              MessageTile(name: "Ahmad",msg: "Hello",isMe:false,isVoice: false,),
+              MessageTile(name: "khan",msg: "How are you",isMe:true,isVoice: false,),
+              MessageTile(name: "Ahmad",msg: "Fine What about You",isMe:false,isVoice: false,),
+              MessageTile(name: "khan",msg: "",isMe:true,isVoice: true,),
+              MessageTile(name: "Ahmad",msg: "",isMe:false,isVoice: true,),
             ],
           ),
         ),
@@ -38,17 +41,33 @@ class _ChatPageSellerState extends State<ChatPageSeller> {
                 ),
                 child: Row(
                   children: <Widget>[
-                    Expanded(
-                      child: TextField(
-                        style: TextStyle(
-                          color: Colors.black54,
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
+                    Center(
+                      child: CircleAvatar(
+                        radius: 20,
+                        backgroundColor: Colors.white,
+                        child: CircleAvatar(
+                          child: Icon(
+                            Icons.mic,
+                          ),
+                          radius: 20,
+                          backgroundColor: Colors.blueGrey,
                         ),
-                        textCapitalization: TextCapitalization.sentences,
-                        controller: msgController,
-                        decoration: InputDecoration.collapsed(
-                          hintText: 'Send Message ...',
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: TextField(
+                          style: TextStyle(
+                            color: Colors.black54,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textCapitalization: TextCapitalization.sentences,
+                          controller: msgController,
+                          decoration: InputDecoration.collapsed(
+                            hintText: 'Send Message ...',
+                          ),
                         ),
                       ),
                     ),
@@ -60,12 +79,14 @@ class _ChatPageSellerState extends State<ChatPageSeller> {
                     ),
                   ],
                 ),
-
               ),
-              defaultButton(true, "Create Offer", (){
-                Navigator.push(context, MaterialPageRoute(builder: (c)=>CreateOfferSeller()));
+              defaultButton(true, "Create Offer", () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (c) => CreateOfferSeller()));
               }),
-              SizedBox(height: 2,)
+              SizedBox(
+                height: 2,
+              )
             ],
           ),
         ),
@@ -79,7 +100,9 @@ class MessageTile extends StatelessWidget {
   final String msg;
   final String name;
   final bool isMe;
-  const MessageTile(this.name, this.msg, this.isMe);
+  final bool isVoice;
+  final int valueHolder;
+  MessageTile({required this.name, required this.msg, required this.isMe, required this.isVoice,this.valueHolder=2});
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +146,36 @@ class MessageTile extends StatelessWidget {
             SizedBox(
               height: 5,
             ),
-            Text(
+            isVoice?  Container(
+              width: MediaQuery.of(context).size.width / 1.8,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.play_arrow,
+                    color: Colors.white,
+                  ),
+                  Container(
+                    child: Slider(
+                        value: valueHolder.toDouble(),
+                        min: 1,
+                        max: 100,
+                        divisions: 100,
+                        activeColor: Colors.white,
+                        inactiveColor: Colors.grey,
+                        label: '${valueHolder.round()}',
+                        onChanged: (double newValue) {
+                          // setState(() {
+                          //   valueHolder = newValue.round();
+                          // });
+                        },
+                        semanticFormatterCallback:
+                            (double newValue) {
+                          return '${newValue.round()}';
+                        }),
+                  ),
+                ],
+              ),
+            ):Text(
               msg,
               style: TextStyle(color: Colors.white, fontSize: 17),
             ),
